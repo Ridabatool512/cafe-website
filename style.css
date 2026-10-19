@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf2;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+section, article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #795548;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover,
+button:focus-visible {
+    background-color: #5d4037;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #d79b55;
+    outline-offset: 2px;
+}
+
+input, textarea {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 8px 0 15px;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+textarea {
+    min-height: 70px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #ffe0b2;
+}
+
+.filter-button[aria-pressed="true"] {
+    background-color: #4e342e;
+    box-shadow: 0 0 0 2px #d7b49e;
+}
+
+.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.dark-mode section,
+.dark-mode article {
+    background-color: #333333;
+}
+
+.dark-mode table,
+.dark-mode th,
+.dark-mode td {
+    border-color: #777777;
+}
+
+.dark-mode tr:hover {
+    background-color: #594638;
+}
+
+.dark-mode button:hover,
+.dark-mode button:focus-visible {
+    background-color: #5d4037;
+}
+
+#opening-status {
+    font-weight: bold;
+}
+
+#current-date {
+    display: block;
+    margin-top: 6px;
+}
+
+#total {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#form-message,
+#discount-message {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    section,
+    article {
+        padding: 16px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}

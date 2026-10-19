@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Cozy Cafe</h1>
+        <p id="opening-status" aria-live="polite"></p>
+        <time id="current-date"></time>
+
+        <button id="theme-button" type="button" aria-pressed="false">Toggle Light/Dark Mode</button>
+    </header>
+
+    <main>
+        <article>
+            <h2>About Us</h2>
+            <p>
+                Cozy Cafe is a friendly place where you can enjoy
+                delicious coffee, fresh pastries, and a relaxing
+                atmosphere with friends and family.
+            </p>
+
+            <p id="extra-text" hidden>
+                We prepare our drinks with care and use fresh
+                ingredients to make every visit special.
+                Visit us to experience your favorite cafe treats!
+            </p>
+
+            <button id="read-more" type="button" aria-expanded="false" aria-controls="extra-text">Read More</button>
+        </article>
+
+        <section>
+            <h2>Our Menu</h2>
+
+            <div class="filters">
+                <button class="filter-button" data-category="all" type="button" aria-pressed="true">All</button>
+                <button class="filter-button" data-category="drinks" type="button" aria-pressed="false">Drinks</button>
+                <button class="filter-button" data-category="pastries" type="button" aria-pressed="false">Pastries</button>
+            </div>
+
+            <table id="menu-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Select</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr data-category="drinks">
+                        <td>Espresso</td>
+                        <td>Drinks</td>
+                        <td>Rs300</td>
+                        <td><input type="checkbox" class="menu-item" value="300" aria-label="Add Espresso to order"></td>
+                    </tr>
+
+                    <tr data-category="drinks">
+                        <td>Cappuccino</td>
+                        <td>Drinks</td>
+                        <td>Rs500</td>
+                        <td><input type="checkbox" class="menu-item" value="500" aria-label="Add Cappuccino to order"></td>
+                    </tr>
+
+                    <tr data-category="pastries">
+                        <td>Croissant</td>
+                        <td>Pastries</td>
+                        <td>Rs200</td>
+                        <td><input type="checkbox" class="menu-item" value="200" aria-label="Add Croissant to order"></td>
+                    </tr>
+
+                    <tr data-category="pastries">
+                        <td>Chocolate Muffin</td>
+                        <td>Pastries</td>
+                        <td>Rs300</td>
+                        <td><input type="checkbox" class="menu-item" value="300" aria-label="Add Chocolate Muffin to order"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p id="total" aria-live="polite">Total: Rs 0</p>
+        </section>
+
+        <section>
+            <h2>Contact / Feedback Form</h2>
+
+            <form id="feedback-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="birth-year">Birth Year:</label>
+                <input type="number" id="birth-year" min="1900" step="1" placeholder="e.g. 2002">
+
+                <label for="special-notes">Special Requests:</label>
+                <textarea id="special-notes" maxlength="100"
+                    placeholder="Enter special instructions"></textarea>
+
+                <p id="character-count" aria-live="polite">100 characters remaining</p>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <p id="form-message" aria-live="polite"></p>
+            <p id="discount-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
